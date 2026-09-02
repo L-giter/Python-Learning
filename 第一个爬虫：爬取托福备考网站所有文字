@@ -1,0 +1,14 @@
+import requests
+from bs4 import BeautifulSoup
+url = "http://localhost:8080"
+response = requests.get(url)
+print("状态码：", response.status_code)
+print("网页长度：", len(response.text))
+
+html = response.text
+soup = BeautifulSoup(html, "lxml")
+content_all = soup.find_all("body")
+for content in content_all:
+    name = content.text
+    print(name)
+    

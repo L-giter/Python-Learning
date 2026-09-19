@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-url = "http://localhost:8080"
+url = "https://1ef397fb73fd4fa18693e4070be386a4.sg.agentos-app.run"
 response = requests.get(url)
 print("状态码：", response.status_code)
 print("网页长度：", len(response.text))
